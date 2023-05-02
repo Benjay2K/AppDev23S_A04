@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity(), GestureDetector.OnGestureListener, Ges
 
     private lateinit var linearLayoutActivityButton: Button
     private lateinit var tableLayoutActivityButton: Button
+    private lateinit var aboutActivityButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +44,12 @@ class MainActivity : AppCompatActivity(), GestureDetector.OnGestureListener, Ges
         tableLayoutActivityButton = findViewById(R.id.tableLayoutActivityButton)
         tableLayoutActivityButton.setOnClickListener {
             val intent = Intent(this, TableLayoutActivity::class.java)
+            startActivity(intent)
+        }
+
+        aboutActivityButton = findViewById(R.id.aboutActivityButton)
+        aboutActivityButton.setOnClickListener {
+            val intent = Intent(this, AboutActivity::class.java)
             startActivity(intent)
         }
     }
