@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity(), GestureDetector.OnGestureListener, Ges
     private lateinit var linearLayoutActivityButton: Button
     private lateinit var tableLayoutActivityButton: Button
     private lateinit var aboutActivityButton: Button
+    private lateinit var browserActivityButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +51,12 @@ class MainActivity : AppCompatActivity(), GestureDetector.OnGestureListener, Ges
         aboutActivityButton = findViewById(R.id.aboutActivityButton)
         aboutActivityButton.setOnClickListener {
             val intent = Intent(this, AboutActivity::class.java)
+            startActivity(intent)
+        }
+
+        browserActivityButton = findViewById(R.id.browserActivityButton)
+        browserActivityButton.setOnClickListener {
+            val intent = Intent(this, WebBrowserActivity::class.java)
             startActivity(intent)
         }
     }

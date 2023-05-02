@@ -41,6 +41,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="About Activity" />
+
+        <Button
+            android:id="@+id/browserActivityButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Browser Activity" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
